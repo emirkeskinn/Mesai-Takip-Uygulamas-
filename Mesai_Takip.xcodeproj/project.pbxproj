@@ -13,6 +13,9 @@
 		F82F02C9290058E600071D75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F82F02C7290058E600071D75 /* Main.storyboard */; };
 		F82F02CB290058E900071D75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F82F02CA290058E900071D75 /* Assets.xcassets */; };
 		F82F02CE290058E900071D75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F82F02CC290058E900071D75 /* LaunchScreen.storyboard */; };
+		F82F02D629007B1E00071D75 /* OvertimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82F02D529007B1E00071D75 /* OvertimeViewController.swift */; };
+		F82F02DA29007B5300071D75 /* SettingsOvertimeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82F02D929007B5300071D75 /* SettingsOvertimeVC.swift */; };
+		F82F02DC29007DDC00071D75 /* AddOvertimeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82F02DB29007DDC00071D75 /* AddOvertimeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		F82F02CA290058E900071D75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F82F02CD290058E900071D75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F82F02CF290058E900071D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F82F02D529007B1E00071D75 /* OvertimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvertimeViewController.swift; sourceTree = "<group>"; };
+		F82F02D929007B5300071D75 /* SettingsOvertimeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOvertimeVC.swift; sourceTree = "<group>"; };
+		F82F02DB29007DDC00071D75 /* AddOvertimeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOvertimeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +65,13 @@
 				F82F02C1290058E600071D75 /* AppDelegate.swift */,
 				F82F02C3290058E600071D75 /* SceneDelegate.swift */,
 				F82F02C5290058E600071D75 /* ViewController.swift */,
-				F82F02C7290058E600071D75 /* Main.storyboard */,
 				F82F02CA290058E900071D75 /* Assets.xcassets */,
 				F82F02CC290058E900071D75 /* LaunchScreen.storyboard */,
 				F82F02CF290058E900071D75 /* Info.plist */,
+				F82F02C7290058E600071D75 /* Main.storyboard */,
+				F82F02D529007B1E00071D75 /* OvertimeViewController.swift */,
+				F82F02D929007B5300071D75 /* SettingsOvertimeVC.swift */,
+				F82F02DB29007DDC00071D75 /* AddOvertimeVC.swift */,
 			);
 			path = Mesai_Takip;
 			sourceTree = "<group>";
@@ -139,7 +148,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				F82F02C6290058E600071D75 /* ViewController.swift in Sources */,
+				F82F02D629007B1E00071D75 /* OvertimeViewController.swift in Sources */,
 				F82F02C2290058E600071D75 /* AppDelegate.swift in Sources */,
+				F82F02DC29007DDC00071D75 /* AddOvertimeVC.swift in Sources */,
+				F82F02DA29007B5300071D75 /* SettingsOvertimeVC.swift in Sources */,
 				F82F02C4290058E600071D75 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
