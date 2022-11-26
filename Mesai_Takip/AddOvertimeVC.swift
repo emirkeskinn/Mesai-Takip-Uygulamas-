@@ -63,6 +63,7 @@ class AddOvertimeVC: UIViewController {
      override func viewWillAppear(_ animated: Bool) {
          super.viewWillAppear(animated)
          myData()
+         imageOK.image = .none
          imageOK.image = UIImage()
      }
     
@@ -121,16 +122,12 @@ class AddOvertimeVC: UIViewController {
         if let topKazanc2 = data.object(forKey: "tkazanc") as? String {
             sonucT = topKazanc2  //OKUMADI... şimdi okuyor
             sonucS = "Toplam Kazanç: \(sonucT!)"  //OKUMADI... şimdi okuyor
-            bosLabel4.text = sonucS  //OKUMADI... şimdi okuyor
-            print("Toplam Kazanç Label4: \(sonucS!)")
         }
         if let mesaisizToplam = data.object(forKey: "mesaisizToplam") as? Double {
             mesaisizToplamD = mesaisizToplam
         }
         if let mesaisizToplamST = data.object(forKey: "mesaisizToplam") as? String {
             mesaisizToplamS = mesaisizToplamST
-            bosLabel5.text = mesaisizToplamS
-            print("String: \(mesaisizToplamS!)")
         }
     }
     
@@ -143,26 +140,19 @@ class AddOvertimeVC: UIViewController {
         
         if let hiMeSa = Double(weekdayOvertimeText.text!)  {
             let hiMesaD =  hiMeSa * (hiMesUcr ?? 1 )
-            weekdayOvertimeLabel.text = "Mesai saati:  \(hiMeSa)"
-        bosLabel1.text = "\(ceil(hiMesaD))TL"
         result4 = "\(ceil(hiMesaD))TL"
         sonucHiMeSa = result4
         
         if let hsMeSa = Double(weekendOvertimeText.text!) {
             let hsMesaD = hsMeSa * (hsMesUcr ?? 1 )
-        bosLabel2.text = "\(ceil(hsMesaD))TL"
         result2 = "\(ceil(hsMesaD))TL"
         sonuc4 = result2
             
         toplamMesaiUcreti = hsMesaD + hiMesaD
-            let toplamMesaiSt = "\(ceil(toplamMesaiUcreti!))"
-            weekendOvertimeLabel.text = "Mesai saati:  \(hsMeSa)"
-        bosLabel3.text = "Toplam Mesai: \(ceil(toplamMesaiUcreti!))"
-            print("Double4: \(toplamMesaiSt)")
+        print("Double4: \(toplamMesaiUcreti!)")
             
         sonucTop = ceil(mesaisizToplamD! + toplamMesaiUcreti!)
             toplamKazanc = "\(ceil(sonucTop!)) TL"
-            bosLabel6.text = "Toplam Kazanç: \(ceil(sonucTop!))"
         }
         }
         

@@ -43,6 +43,8 @@ class SettingsOvertimeVC: UIViewController {
     @IBOutlet weak var otherFeesLabel: UILabel!
     @IBOutlet weak var otherFeesText: UITextField!
     
+    @IBOutlet var imageOK: UIImageView!
+    
     
     var netMaaas: String?
     var primAdetiL: String?
@@ -70,6 +72,7 @@ class SettingsOvertimeVC: UIViewController {
      override func viewWillAppear(_ animated: Bool) {
          super.viewWillAppear(animated)
          dataMain()
+         imageOK.image = .none
      }
      
      override func viewDidAppear(_ animated: Bool) {
@@ -120,7 +123,6 @@ class SettingsOvertimeVC: UIViewController {
             if let girilenMaasD = girilenMaas as? Double {
                 netMaasDouble = girilenMaasD
                 netSalaryLabel.text =  "Net Maaşınız: \(netMaasDouble!)"
-                bosLabel2.text = "emk:  \(netMaasDouble!)" // çalışmıyor
             }
             if let girilenMaasD = girilenMaas as? String {
                 netMaasST = girilenMaasD
@@ -129,7 +131,6 @@ class SettingsOvertimeVC: UIViewController {
         case .BasariPrimi:
             let primUcreti = UserDefaults.standard.object(forKey: "primUcreti")
             if let toplamPrim = primUcreti as? String {
-                bosLabel3.text = "\(toplamPrim)"
             }
             let girilenPrim = UserDefaults.standard.object(forKey: "prim")
             if let primAdeti = girilenPrim as? String {
@@ -142,9 +143,12 @@ class SettingsOvertimeVC: UIViewController {
             }
         case .digerUcretler:
             let otherFeeS2 = UserDefaults.standard.object(forKey: "otherLabel") ?? "Boş"
+            let otherFeeS3 = UserDefaults.standard.object(forKey: "other") ?? "Boş"
             if let otherFee2 = otherFeeS2 as? String {
-                otherFeesLabel.text = "\(otherFee2): \(otherFeesText.text!) TL"
+            if let otherFee3 = otherFeeS3 as? String {
+                otherFeesLabel.text = "\(otherFee2): \(otherFee3) TL"
             }
+                }
         case .hiMesUc:
             let hi50MesaiUcreti = UserDefaults.standard.object(forKey: "50kazanc")
             if let hi50MesaiUcretiR = hi50MesaiUcreti as? Double {
@@ -218,6 +222,8 @@ class SettingsOvertimeVC: UIViewController {
                             let otherFee = "\(resultOtherFees!) TL"
                             otherFeesLabel.text =  "Diğer Ücret: \(otherFee) TL"
                             UserDefaults.standard.set(otherFee, forKey: "other")
+                        } else {
+                            resultOtherFees = 0
                         }
         case .hiMesUc:
             if AgDeductionText.text == "" {
@@ -253,13 +259,15 @@ class SettingsOvertimeVC: UIViewController {
         }
                 
     @IBAction func SaveButton(_ sender: Any) {
-        dataSet(on: .netMaas)
-        dataSet(on: .BasariPrimi)
-        dataSet(on: .Agi)
-        dataSet(on: .digerUcretler)
-        dataSet(on: .hiMesUc)
-        dataSet(on: .hsMesUc)
-        dataSet(on: .mesaiToplam)
-        dataSet(on: .mesaisizToplam)
+        setData()
+        if netSalaryText.text != "" {
+            if numberOfAchBonusText.text != "" {
+                if AgDeductionText.text  != "" {
+                    imageOK.image = UIImage(named: "ok")
+                }
+            }
+            
+        }
+        
   }
 }
