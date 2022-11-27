@@ -16,6 +16,7 @@
 		F82F02D629007B1E00071D75 /* OvertimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82F02D529007B1E00071D75 /* OvertimeViewController.swift */; };
 		F82F02DA29007B5300071D75 /* SettingsOvertimeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82F02D929007B5300071D75 /* SettingsOvertimeVC.swift */; };
 		F82F02DC29007DDC00071D75 /* AddOvertimeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82F02DB29007DDC00071D75 /* AddOvertimeVC.swift */; };
+		F8ADB1062933530D00FD07A4 /* ExpensesListerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8ADB1052933530D00FD07A4 /* ExpensesListerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		F82F02D529007B1E00071D75 /* OvertimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvertimeViewController.swift; sourceTree = "<group>"; };
 		F82F02D929007B5300071D75 /* SettingsOvertimeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOvertimeVC.swift; sourceTree = "<group>"; };
 		F82F02DB29007DDC00071D75 /* AddOvertimeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOvertimeVC.swift; sourceTree = "<group>"; };
+		F8ADB1052933530D00FD07A4 /* ExpensesListerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpensesListerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				F82F02D529007B1E00071D75 /* OvertimeViewController.swift */,
 				F82F02D929007B5300071D75 /* SettingsOvertimeVC.swift */,
 				F82F02DB29007DDC00071D75 /* AddOvertimeVC.swift */,
+				F8ADB1052933530D00FD07A4 /* ExpensesListerViewController.swift */,
 			);
 			path = Mesai_Takip;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8ADB1062933530D00FD07A4 /* ExpensesListerViewController.swift in Sources */,
 				F82F02C6290058E600071D75 /* ViewController.swift in Sources */,
 				F82F02D629007B1E00071D75 /* OvertimeViewController.swift in Sources */,
 				F82F02C2290058E600071D75 /* AppDelegate.swift in Sources */,

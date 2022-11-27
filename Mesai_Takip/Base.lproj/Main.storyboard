@@ -581,6 +581,7 @@
                         <segue destination="n4Z-nh-b1g" kind="relationship" relationship="viewControllers" id="rWO-IE-1Zf"/>
                         <segue destination="Iqt-Kh-RP6" kind="relationship" relationship="viewControllers" id="UyZ-UN-Aee"/>
                         <segue destination="sRk-5j-5hP" kind="relationship" relationship="viewControllers" id="DYp-vB-H08"/>
+                        <segue destination="uym-Zk-LLs" kind="relationship" relationship="viewControllers" id="c0j-Mb-rxg"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yen-EW-FfX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -767,11 +768,90 @@
             </objects>
             <point key="canvasLocation" x="1656.8" y="846.9265367316342"/>
         </scene>
+        <!--Giderler-->
+        <scene sceneID="9Hb-w3-Og8">
+            <objects>
+                <viewController id="uym-Zk-LLs" customClass="ExpensesListerViewController" customModule="Mesai_Takip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X7E-YR-x60">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="m14-y1-Sat">
+                                <rect key="frame" x="16" y="167" width="343" height="434"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="K3v-ot-jeo">
+                                        <rect key="frame" x="0.0" y="44.5" width="343" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="K3v-ot-jeo" id="1g1-dS-HKC">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NtM-Tw-d6g">
+                                <rect key="frame" x="0.0" y="39" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="yO6-Lc-T9F">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="IgU-Zd-Y0F">
+                                            <connections>
+                                                <action selector="addButton:" destination="uym-Zk-LLs" id="jnR-Jz-bd4"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZOR-Sh-miU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="m14-y1-Sat" firstAttribute="leading" secondItem="X7E-YR-x60" secondAttribute="leadingMargin" id="DxD-gh-tNe"/>
+                            <constraint firstItem="NtM-Tw-d6g" firstAttribute="top" secondItem="X7E-YR-x60" secondAttribute="topMargin" constant="-5" id="Fvu-yF-UFr"/>
+                            <constraint firstItem="NtM-Tw-d6g" firstAttribute="leading" secondItem="ZOR-Sh-miU" secondAttribute="leading" id="TUo-lm-aq6"/>
+                            <constraint firstItem="m14-y1-Sat" firstAttribute="top" secondItem="NtM-Tw-d6g" secondAttribute="bottom" constant="84" id="Xh0-co-eJH"/>
+                            <constraint firstItem="m14-y1-Sat" firstAttribute="trailing" secondItem="X7E-YR-x60" secondAttribute="trailingMargin" id="ndF-cR-aRp"/>
+                            <constraint firstItem="NtM-Tw-d6g" firstAttribute="centerX" secondItem="m14-y1-Sat" secondAttribute="centerX" id="qQb-UK-Rnm"/>
+                            <constraint firstItem="ZOR-Sh-miU" firstAttribute="bottom" secondItem="m14-y1-Sat" secondAttribute="bottom" constant="66" id="sGX-py-3Yu"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Giderler" image="square.and.arrow.up" catalog="system" id="bcV-w9-NHb"/>
+                    <navigationItem key="navigationItem" id="f8K-mM-AsW"/>
+                    <connections>
+                        <outlet property="tableView" destination="m14-y1-Sat" id="XLs-If-0d6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m04-Q1-ZPh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2497" y="922"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="K4R-6e-287">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q5w-DB-WDO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qOj-U8-4hx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uym-Zk-LLs" kind="relationship" relationship="rootViewController" id="gfV-RL-Fxt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KXo-6r-kCV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1778" y="90"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="gfV-RL-Fxt"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="turkosan" width="439" height="94"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
