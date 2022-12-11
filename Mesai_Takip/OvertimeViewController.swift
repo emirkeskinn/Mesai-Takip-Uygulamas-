@@ -113,7 +113,7 @@ class OvertimeViewController: UIViewController {
         
         let otherFeeS2 = data.object(forKey: "otherLabel") ?? "Boş"
         if let otherFee2 = otherFeeS2 as? String {
-            otherLabel.text = "\(otherFee2)"
+            otherLabel.text = "\(otherFee2)" //
         }
     }
     

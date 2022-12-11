@@ -91,7 +91,7 @@ class AddOvertimeVC: UIViewController {
             bosLabel3.text = "Net Maaş:  \(girilenMaasD)"  //OKUMADI
         }
         if let guncel50Saat = data.object(forKey: "himesai") as? String {
-            weekdayOvertimeLabel.text = "Mesai saati:  \(guncel50Saat)"              // labeli anlık güncellemek için ne yapmak lazım
+            weekdayOvertimeLabel.text = "Mesai saati:  \(guncel50Saat)"
         }
         if let guncel100Saat = data.object(forKey: "hsmesai") as? String {
             weekendOvertimeLabel.text = "Mesai Saati:  \(guncel100Saat)"
@@ -148,9 +148,7 @@ class AddOvertimeVC: UIViewController {
         result2 = "\(ceil(hsMesaD))TL"
         sonuc4 = result2
             
-        toplamMesaiUcreti = hsMesaD + hiMesaD
-        print("Double4: \(toplamMesaiUcreti!)")
-            
+        toplamMesaiUcreti = hsMesaD + hiMesaD            
         sonucTop = ceil(mesaisizToplamD! + toplamMesaiUcreti!)
             toplamKazanc = "\(ceil(sonucTop!)) TL"
         }

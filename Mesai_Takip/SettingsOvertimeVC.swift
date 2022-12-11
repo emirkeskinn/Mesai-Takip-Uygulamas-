@@ -255,7 +255,7 @@ class SettingsOvertimeVC: UIViewController {
 
             UserDefaults.standard.set(overTimeTotal, forKey: "toplamMesai")
                         }
-        }
+                }
         }
                 
     @IBAction func SaveButton(_ sender: Any) {
@@ -268,6 +268,5 @@ class SettingsOvertimeVC: UIViewController {
             }
             
         }
-        
   }
 }
